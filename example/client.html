@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE example</title>
+</head>
+<body>
+<div>
+    <pre id="log"></pre>
+</div>
+</body>
+<script>
+    const log = document.getElementById('log');
+    const es = new EventSource('./sse-service.php');
+
+    es.onmessage = (messsage) => {
+        log.innerText += messsage.data + "\n"
+    }
+    es.onerror = (ev) => {
+        es.close();
+    }
+</script>
+</html>

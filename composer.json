@@ -1,0 +1,16 @@
+{
+    "name": "murdej/sse",
+    "description": "PHP server site event helper",
+    "autoload": {
+        "psr-4": {
+            "Murdej\\Sse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vít Peprníček",
+            "email": "vit.peprnicek@gmail.com"
+        }
+    ],
+    "require": {}
+}
